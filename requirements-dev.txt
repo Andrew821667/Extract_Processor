@@ -1,0 +1,26 @@
+# Включаем основные зависимости
+-r requirements.txt
+
+# Дополнительные инструменты разработки
+jupyter-lab>=4.0.0
+jupyterlab-git>=0.41.0
+memory-profiler>=0.61.0
+line-profiler>=4.1.0
+snakeviz>=2.2.0
+
+# Линтеры и форматировщики
+pylint>=2.17.0
+isort>=5.12.0
+bandit>=1.7.5
+safety>=2.3.5
+
+# Тестирование
+pytest-mock>=3.11.0
+pytest-benchmark>=4.0.0
+pytest-xdist>=3.3.0
+coverage>=7.2.0
+
+# Документация
+mkdocs>=1.5.0
+mkdocs-material>=9.1.0
+pdoc>=14.1.0
