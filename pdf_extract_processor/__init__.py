@@ -12,8 +12,10 @@ __email__ = "contact@pdfextract.com"
 # Импорты основных классов
 from .main_processor import AdvancedPDFExtractProcessor
 from .quality_analyzer import IndependentQualityAnalyzer
+from .improved_processor import ImprovedAdvancedPDFExtractProcessor
 
 __all__ = [
     "AdvancedPDFExtractProcessor",
     "IndependentQualityAnalyzer",
+    "ImprovedAdvancedPDFExtractProcessor",
 ]
