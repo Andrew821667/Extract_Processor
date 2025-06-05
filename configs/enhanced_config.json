@@ -1,0 +1,22 @@
+{
+  "extract_processor": {
+    "version": "2.0",
+    "features": {
+      "premium_postprocessing": true,
+      "rag_tools": true,
+      "enhanced_markdown": true,
+      "ocr_improvements": true
+    }
+  },
+  "postprocessing": {
+    "safe_ocr_fixes": true,
+    "structure_improvement": true,
+    "paragraph_enhancement": true
+  },
+  "rag_tools": {
+    "clean_service_info": true,
+    "structure_for_chunking": true,
+    "multi_document_support": true
+  },
+  "updated": "2025-06-05T09:59:19.924853"
+}

@@ -35,3 +35,37 @@ pip install -r requirements.txt
 ## 📄 Лицензия
 
 MIT License
+
+
+## 🚀 Новые возможности v2.0
+
+### ✨ Премиум постобработка
+- Безопасное исправление OCR ошибок
+- Улучшение структуры документа  
+- Сохранение исходного форматирования
+
+### 🤖 RAG-инструменты
+- Очистка НПА от служебной информации
+- Подготовка для векторизации
+- Объединение нескольких документов
+
+### 📦 Новые модули
+- `postprocessing.premium_processor` - Премиум постобработка
+- `rag_tools.rag_processor` - RAG инструменты
+- Обновленная конфигурация
+
+### 🔧 Использование
+
+```python
+from pdf_extract_processor import AdvancedPDFExtractProcessor
+from pdf_extract_processor.postprocessing.premium_processor import PremiumPostProcessor
+
+# Извлечение + постобработка
+processor = AdvancedPDFExtractProcessor()
+postprocessor = PremiumPostProcessor()
+
+result = processor.process_single_file_advanced("document.pdf")
+enhanced = postprocessor.process(str(result))
+```
+
+Обновлено: 2025-06-05

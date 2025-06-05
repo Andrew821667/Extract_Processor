@@ -1,21 +1,27 @@
 """
-PDF Extract Processor - Продвинутая система извлечения текста из PDF
-
-Версия: 2.0.0
-Автор: PDF Extract Processor Team
+Extract_Processor - Улучшенная система извлечения PDF
+Версия 2.0 с премиум постобработкой и RAG-инструментами
 """
 
-__version__ = "2.0.0"
-__author__ = "PDF Extract Processor Team"
-__email__ = "contact@pdfextract.com"
+__version__ = "2.0"
 
-# Импорты основных классов
 from .main_processor import AdvancedPDFExtractProcessor
-from .quality_analyzer import IndependentQualityAnalyzer
 from .improved_processor import ImprovedAdvancedPDFExtractProcessor
+from .quality_analyzer import IndependentQualityAnalyzer
+
+# Новые модули
+try:
+    from .postprocessing.premium_processor import PremiumPostProcessor
+    from .rag_tools.rag_processor import RAGDataProcessor
+except ImportError:
+    # Обратная совместимость
+    PremiumPostProcessor = None
+    RAGDataProcessor = None
 
 __all__ = [
-    "AdvancedPDFExtractProcessor",
-    "IndependentQualityAnalyzer",
-    "ImprovedAdvancedPDFExtractProcessor",
+    'AdvancedPDFExtractProcessor',
+    'ImprovedAdvancedPDFExtractProcessor', 
+    'IndependentQualityAnalyzer',
+    'PremiumPostProcessor',
+    'RAGDataProcessor'
 ]
