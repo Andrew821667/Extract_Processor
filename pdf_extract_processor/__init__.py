@@ -25,3 +25,7 @@ __all__ = [
     'PremiumPostProcessor',
     'RAGDataProcessor'
 ]
+
+# Улучшенные компоненты
+from .enhanced_processor import EnhancedPDFProcessor, diagnose_multiple_pdfs
+from .utils.diagnostics import quick_pdf_test, analyze_pdf_batch, print_batch_analysis
