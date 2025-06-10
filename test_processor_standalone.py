@@ -23,7 +23,7 @@ import time
 from dataclasses import dataclass
 from enum import Enum
 import tempfile
-from .enhanced_processor import EnhancedPDFProcessor
+# from .enhanced_processor import EnhancedPDFProcessor
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
@@ -283,10 +283,10 @@ class AdvancedPDFExtractProcessor:
 
     def auto_process_with_detection(self, pdf_path):
         """Автоматическая обработка с определением метода"""
-        # # enhanced = EnhancedPDFProcessor()  # ИСПРАВЛЕНО  # ИСПРАВЛЕНО
-        # # result = enhanced.extract_with_auto_method(pdf_path)  # ИСПРАВЛЕНО  # ИСПРАВЛЕНО
-        # Используем основной метод вместо enhanced
-        return self.process_single_file_advanced(pdf_path)  # ИСПРАВЛЕНО
+        enhanced = EnhancedPDFProcessor()
+        result = enhanced.extract_with_auto_method(pdf_path)
+        
+        # Возвращаем в формате, совместимом с существующими методами
         if 'content' in result:
             return {
                 'markdown_content': result['content'],
@@ -299,3 +299,4 @@ class AdvancedPDFExtractProcessor:
             }
         else:
             return {'error': result.get('error', 'Unknown error')}
+# Standalone version for testing
